@@ -1,0 +1,25 @@
+show databases ;
+create database vit;
+use vit;
+CREATE TABLE vit_bhopal (
+       full_name VARCHAR(100),
+       reg_no VARCHAR(20) PRIMARY KEY,
+       school VARCHAR(100),
+       graduation_year int
+       );
+INSERT INTO vit_bhopal(full_name, reg_no, school, graduation_year) VALUES 
+('Chetna Aswani','23BCE11511','School of Computer Science',2027),
+('Shabd Gupta','21BEC11018','School of Electrical Engineering','2025'),
+('Stuti S. Agrawal','23BCE11717','School of Computer Science','2027'),
+('Sandeep Solankii','23BAI10807','School of Computer Science - AI & ML','2027');
+INSERT INTO vit_bhopal(full_name, reg_no, school, graduation_year) VALUES 
+('Shayna Singh','23BEC11098','School of Electrical Engineering','2027'),
+('Kanishk','20BHI11234','School of Advance Science and Languages','2024'),
+('Dishaa Patil','24BCE10849','School of Computer Science','2028'),
+('Meet Chaure','24BAI11345','School of Computer Science - AI & ML','2028');
+select* from vit_bhopal;
+alter table vit_bhopal add(phone varchar(10));
+desc  vit_bhopal;
+alter table vit_bhopal drop column phone;
+alter table vit_bhopal add(s_country varchar(10) default 'India');
+update vit_bhopal set full_name='Aditya Sharma' WHERE full_name='Kanishk';
